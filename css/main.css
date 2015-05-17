@@ -1,0 +1,182 @@
+body {
+	/*max-width: 1200px;*/
+	font-size: 16px;
+	margin: 0 auto;
+	/*height: 4000px;*/
+	color: #252525;
+}
+
+/* General CSS classes */
+
+.margin-auto {
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+	position: relative;
+}
+
+.right {
+	float: right;
+	position: relative;
+}
+
+.whole {
+	width: 100%;
+	position: relative;
+}
+
+.half {
+	width: 50%;
+	position: relative;
+}
+
+.third {
+	width: 33%;
+	position: relative;
+}
+
+.view-height {
+	overflow: hidden;
+	height: 100vh;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+.card{
+	border-radius: 2px;
+	margin: 50px auto 50px auto;
+	margin-top: 50px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.small {
+	width: 50%;
+	padding: 40px;
+}
+
+.large {
+	width: 75%;
+	max-width: 500px;
+	padding: 40px;
+}
+
+.small {
+	width: 25%;
+	padding: 40px;
+}
+
+.break {
+	height: 2px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: #252525;
+	width: 80%;
+	margin: 40px auto;
+}
+
+section{
+	width: 100%;
+	overflow: auto;
+	zoom: 1;
+}
+
+/*section > div:last-child{
+	content: "";
+	clear: both;
+}
+*/
+
+/*  All of the Header specific CSS */
+
+header {
+	z-index: 5;
+	width: 100%;
+	position: relative;
+	background-color: #ffa000;
+	height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#nav {
+	z-index: 100;
+	display: none;
+	top: -20px;
+	left: 0px;
+	height: 50px;
+	width: 500px;
+	position: fixed;
+}
+
+
+.bar{
+	width: 60%;
+	height: 10%;
+	border-radius: 5px;
+	background-color: blue;
+	margin: 10% auto;
+	position: relative;
+}
+
+#burger{
+	z-index: 100;
+}
+
+.bubble {
+	border-radius: 100px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: #ffa000;
+	height:50px;
+	width: 50px;
+	position: absolute;
+	margin: 10%;
+	display: inline-block;
+	text-align: center;
+}
+
+.bubble > h3 {
+	font-size: 1.4em;
+	margin-top: 30%;
+}
+
+.bar:first-child {
+	margin-top: 25%;
+	/*transform-origin: right center;
+	transform: rotate(-45deg);*/
+}
+.bar:last-child {
+	/*transform-origin: right center;
+	transform: rotate(45deg);*/
+}
+
+
+header ul{
+	position: relative;
+	display: inline-block;
+	padding: 20px;
+}
+
+header ul li:nth-of-type(n+1){
+	/*margin-left: 3em;*/
+}
+
+header ul li {
+	font-size: 1.6em;
+	height: 100%;
+	position: relative;
+	display: inline-block;
+	
+}
+
+header ul li + li{
+	margin-left: 4em;
+}
