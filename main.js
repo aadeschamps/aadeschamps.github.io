@@ -8,30 +8,33 @@ app.nav = (function(){
 		doc =     $(document);
 	return {
 		move: function(){
-			if (opened) {
-				opened = false;
-				$('#about-n').animate({left: '-=70px'})
-				$('#project-n').animate({left: '-=70px', top: '-=70px'})
-				$('#contact-n').animate({top: '-=70px'})
-			}else {
-				opened = true;
-				$('#about-n').animate({left: '+=70px'})
-				$('#project-n').animate({left: '+=70px', top: '+=70px'})
-				$('#contact-n').animate({top: '+=70px'})
+			if(open){
+				$('#nav').removeClass('inactive');
+				$('#nav').addClass('active');
+				open = false;
+			}else{
+				$('#nav').removeClass('active');
+				$('#nav').addClass('inactive');
+				open = true;
 			}
 		},
 		fade: function(){
 			if ( hidden && doc.scrollTop() >= header.height()){
 				hidden = false;
 				console.log(hidden);
-				nav.fadeIn("slow");
-				console.log('going down');
+				nav.removeClass('out');
+				nav.addClass('in');
+				// nav.fadeIn("slow");
 			}
 			if ( !hidden && doc.scrollTop() <= header.height()){
 				console.log(hidden);
 				hidden = true
-				nav.fadeOut("fast");
-				console.log('going up')
+				nav.removeClass('in');
+				nav.addClass('out');
+				$('#nav').removeClass('active');
+				$('#nav').addClass('inactive');
+				open = true;
+				// nav.fadeOut("fast");
 			}
 		},
 		scroll_to: function(){
